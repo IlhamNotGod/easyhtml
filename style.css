@@ -1,74 +1,165 @@
-body{
-    font-family: Arial, sans-serif;
-    background-color:#f4f4f4;
+/* Reset basic margin & padding */
+* {
     margin: 0;
-    font-size: 16px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e2e8f0; /* Warna background abu-abu kebiruan modern */
+    color: #334155;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-}
-
-header {
-    font-size: 36px;
-    background-color: #000000;
-    color: white;
     padding: 20px;
-    text-align: center;
 }
 
-
-.container {
-    font-size: 18px;
-    flex:1;
+/* Container Utama */
+.profile-card {
+    background-color: #ffffff;
+    width: 100%;
     max-width: 600px;
-    margin: 30px auto; /* bikin ke tengah */
-    padding: 20px;
-    background-color: white;
-    border: 2px solid #3498db; /* border */
-    border-radius: 10px; /* sudut melengkung */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Supaya header mengikuti radius container */
 }
 
-h2 {
-    font-size: 24px;
-    color:#2c3e50;
+/* Header (Bagian Atas) */
+.profile-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px 20px 20px;
 }
 
-ul {
-    list-style-type: square;
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.Kontak  {
+.profile-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* Konten Dalam Card */
+.profile-content {
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section h2 {
+    font-size: 18px;
+    color: #0f172a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section h2 i {
+    color: #3b82f6; /* Warna biru untuk icon di judul */
+}
+
+/* Tabel Biodata */
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.biodata-table td {
+    padding: 6px 0;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.biodata-table td:first-child {
+    width: 110px;
+    color: #64748b;
+}
+
+/* Bagian Skill (Pill Tags) */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #f1f5f9;
+    color: #3b82f6;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #cbd5e1;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+/* Bagian Kontak (Tombol) */
+.kontak {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
-.kontak-item {
-    border: 2px solid #3498db;
-    padding: 15px;
+.kontak-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
     border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.kontak-item p {
-    margin: 0 0 5px 0;
-    font-weight: bold;
-}
-
-.kontak-item a {
     text-decoration: none;
-    color: #2c3e50;
-}
-
-.kontak-item a:hover {
-    color: #3498db;
-}
-
-
-footer {
-    background-color: #000000;
     color: white;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kontak-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.email { background-color: #ea4335; }
+.whatsapp { background-color: #25d366; }
+.discord { background-color: #5865F2; }
+
+/* Footer */
+footer {
+    background-color: #f8fafc;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 15px;
+    font-size: 13px;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
 }
